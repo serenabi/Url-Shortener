@@ -1,7 +1,7 @@
 # URL Shortener
 *- A Web Service using Python*
 
-https://z-urlshortener.herokuapp.com/
+https://z-urlshortener.herokuapp.com
 
 ## Summary
 

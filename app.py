@@ -7,23 +7,13 @@ from urllib.request import urlopen
 
 import string, os
 
-# host_url - Local
-HOST = 'localhost'
-PORT = '5000'
-host_url = ''.join([args for args in ['http://', HOST, ':', PORT, '/']])
-
-# host_url - Heroku platform
-# host_url = 'https://z-urlshortener.herokuapp.com/'
+# hosted on Heroku platform
+host_url = 'https://z-urlshortener.herokuapp.com/'
 
 # flask app and database
 app = Flask(__name__)
 
-# SQLAlchemy config - Local
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://postgres:password@localhost/urls'
-
-# SQLAlchemy config - Heroku
-# app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
-
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)

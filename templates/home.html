@@ -4,13 +4,8 @@
 	<title>URL Shortener</title>
 </head>
 <body>
-	<div style="position: absolute;
-				top: 25%;
-				left: 30%;
-				text-align: center;">
-
+	<div style="position: absolute; top: 25%; left: 30%; text-align: center;">
 		<h1 style="font-size: 2.5em; font-family: times;">Url Shortener</h1>
-
 		{% if not short_url %}					
 			<form action="/" method="POST">
 				<p><input type="text" name="url" size="80" style="height: 40px; text-align: center; border: 2px solid grey" placeholder="Paste the url"></p>				

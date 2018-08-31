@@ -52,3 +52,11 @@ The application uses Base36 encoding to shorten URLs. The original URL has a has
 </p>
 
 The application was initially prototyped using SQLite database, but it has been deployed on Heroku using PostgreSQL database. PostgreSQL can handle production deployment at scale.
+
+## Further Improvements
+
+1. The application can be hooked upto Travis CI for Continuous Integration and Deployment. A local change can be pushed to GitHub, and from there to Travis CI which runs unit tests before deploying the build on Heroku with the changes, if the tests passes.
+
+2. More tests can be written on the Flask application. Url validation has been done for the web service endpoint but not for the web interface. There is no test currently for concurrent requests to the service at scale.
+
+3. The web interface can be made more dynamic. Currently, after getting a shortened url, a user has to refresh the page to go back to the home page.

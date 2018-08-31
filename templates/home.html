@@ -13,25 +13,14 @@
 
 		{% if not short_url %}					
 			<form action="/" method="POST">
-				<p><input type="text" name="url" size="80" style="height: 40px; 
-																text-align: center;
-																border: 2px solid grey" 
-															placeholder="Paste the url">
-				</p>				
+				<p><input type="text" name="url" size="80" style="height: 40px; text-align: center; border: 2px solid grey" placeholder="Paste the url"></p>				
 				<p><input type="submit" value="Shorten" style="line-height: 1.8"></p>
-			</form>			
-
+			</form>
 		{% else %}
-			<p><input type="text" name="url" size="80" style="height: 40px; 
-																text-align: center;
-																border: 2px solid grey" 
-															placeholder="{{ url }}">
-			</p>			
+			<p><input type="text" name="url" size="80" style="height: 40px; text-align: center; border: 2px solid grey" placeholder="{{ url }}"></p>			
 			<p style="font-family: calibri">SHORT URL</p>
 			<p><a href="{{ short_url }}">{{ short_url }}</p>			
-			
 		{% endif %}
-
 	</div>
 </body>
 </html>
